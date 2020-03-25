@@ -18,10 +18,11 @@
     <script src="js/anim.js">//动画</script>
 
     <style type="text/css">
+        html,body{margin:0;padding:0;}
         .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
         .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
     </style>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?key=1HikU6M8c0OfS1il7cV6GG8hfSObgZ7h&v=1.1&services=true"></script>
 </head>
 
 <body>
@@ -188,16 +189,16 @@
                 <h2>邮箱</h2>maoluyang@xmyiluxin.com</a></li>
             <li><img src="picture/contact_pic3.png">
 
-                <p>厦门市湖里区乌石浦路38号201室</p></li>
+                <p>厦门市湖里区湖里大道72号</p></li>
         </ul>
     </div>
     <div class="contact_map anim anim-3">
         <img src="picture/contact_pic4.png">
         百度地图上的我们&nbsp;|&nbsp;Baidu we on the map
     </div>
-    <div class="contact_map2 anim anim-4">
+    <div ><!--class="contact_map2 anim anim-4">-->
         <!--百度地图容器-->
-        <div style="width:1905px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+        <div style="width:1920px;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
     </div>
 </div>
 <!--正文end-->
@@ -222,6 +223,7 @@
         </div>
         <div class="c_l"></div>
     </div>
+</div>
 <a href="javascript:void(0)" class="gotop" onClick="goTop()"></a>
 <!--尾部end-->
 <script language="javascript" src="js/foot.js"></script>
@@ -265,7 +267,7 @@
     }
 
     //标注点数组
-    var markerArr = [{title:"厦门市亿路鑫贸易有限公司",content:"厦门市亿路鑫贸易有限公司",point:"118.103318|24.524933",isOpen:0,icon:{w:21,h:21,l:0,t:0,x:6,lb:5}}
+    var markerArr = [{title:"厦门市亿路鑫贸易有限公司",content:"通讯地址：厦门市湖里区湖里大道72号（近中铁二局）</br>电话：13774666386/13599921989",point:"118.116236|24.517247",isOpen:1,icon:{w:25,h:25,l:42,t:21,x:6,lb:5}}
     ];
     //创建marker
     function addMarker(){
@@ -317,7 +319,7 @@
     }
     //创建一个Icon
     function createIcon(json){
-        var icon = new BMap.Icon("http://app.baidu.com/map/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        var icon = new BMap.Icon("http://api.map.baidu.com/lbsapi/creatmap/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
         return icon;
     }
 
